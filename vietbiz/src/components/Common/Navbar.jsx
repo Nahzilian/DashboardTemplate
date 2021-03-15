@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { logout } from '../../utils/auth/login';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { logout } from '../../utils/auth/login'
 import '../assets/stylesheets/Navbar.css';
 export default function Navbar() {
     const user = JSON.parse(localStorage.getItem('user'));
     return (
         <>
-            <nav className="navbar navbar-expand-lg home-navbar">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Logo</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +32,8 @@ export default function Navbar() {
                                             <Link to="/dashboard" className="nav-link" href="#">Dashboard</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link to="/" onClick = {logout} className="nav-link" href="#">Sign out</Link>
-                                        </li>             
+                                            <div to="/" onClick = {logout} className="nav-link" href="#">Sign out</div>
+                                        </li>              
                                     </>:<>
                                         <li className="nav-item">
                                             <Link to="/login" className="nav-link" href="#">Login</Link>

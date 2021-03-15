@@ -3,7 +3,10 @@ import './components/assets/stylesheets/App.css';
 import Homepage from './components/Homepage/Homepage';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
+import Login from './components/Auth/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+
 
 
 function App() {
@@ -12,7 +15,8 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={Homepage}/>
-        {/* <ProtectedRoute path="/dashboard" component={Dashboard} isAuth={auth}/> */}
+        <Route exact path='/login' component={Login}/>
+        <ProtectedRoute path="/dashboard" component={Dashboard} isAuth={isAuth}/>
         <Route path='/' component={NotFound}/>
       </Switch>
     </Router>
