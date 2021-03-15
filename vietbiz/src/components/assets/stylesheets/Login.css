@@ -1,0 +1,21 @@
+.login-svg-wrapper {
+    position: relative;
+    background-image: url('../svg/svg_auth.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+}
+
+.form-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.form-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
