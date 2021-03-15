@@ -1,11 +1,21 @@
+import React, { useState } from 'react';
 import './components/assets/stylesheets/App.css';
-import Homepage from './components/Homepage/Homepage'
+import Homepage from './components/Homepage/Homepage';
+import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import NotFound from './components/NotFound/NotFound';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+
 
 function App() {
+  const [isAuth, setAuth] = useState(JSON.parse(localStorage.getItem("isAuth")) || false);
   return (
-    <div>
-      <Homepage />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Homepage}/>
+        {/* <ProtectedRoute path="/dashboard" component={Dashboard} isAuth={auth}/> */}
+        <Route path='/' component={NotFound}/>
+      </Switch>
+    </Router>
   );
 }
 
