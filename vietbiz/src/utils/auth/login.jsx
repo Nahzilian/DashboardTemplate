@@ -1,3 +1,5 @@
+import { Redirect } from "react-router-dom";
+
 export const login = (res) => {
     const token = res.token;
     const user = res.user;
@@ -10,6 +12,7 @@ export const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     localStorage.removeItem('isAuth');
+    return <Redirect to="/"/>
 }
 
 export const loginErrorHandler = (error, callback) => {

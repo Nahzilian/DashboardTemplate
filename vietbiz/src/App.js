@@ -4,6 +4,7 @@ import Homepage from './components/Homepage/Homepage';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Auth/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 
@@ -15,7 +16,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route exact path='/login' component={Login}/>
-        {/* <ProtectedRoute path="/dashboard" component={Dashboard} isAuth={auth}/> */}
+        <ProtectedRoute path="/dashboard" component={Dashboard} isAuth={isAuth}/>
         <Route path='/' component={NotFound}/>
       </Switch>
     </Router>
