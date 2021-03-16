@@ -15,6 +15,7 @@ export default function Form() {
     }
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        console.log(username)
         axios.post("/api/login", { username, password })
             .then(res => {
                 login(res.data);
@@ -40,24 +41,20 @@ export default function Form() {
             <div className="form-content">
                 <h2>Login to your account</h2>
                 <br />
-                <form>
+                <form onSubmit={(e) => onSubmitHandler(e)}>
                     <div className="mb-3">
                         <label htmlFor="username" className="form-label">Username</label>
-                        <input type="text" className="form-control" id="username" aria-describedby="username" onChange={(e) => setUsername(e.target.value)} />
-                        <div id="username" className="form-text">We'll never share your information with anyone else.</div>
+                        <input type="text" className="form-control" id="username" aria-describedby="username" onChange={(e) => setUsername(e.target.value)} placeholder="Enter your username" required/>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="inputPassword5" className="form-label">Password</label>
-                        <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" onChange={(e) => setPassword(e.target.value)} />
-                        <div id="passwordHelpBlock" className="form-text">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                        </div>
+                        <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" onChange={(e) => setPassword(e.target.value)} placeholder="***********" required/>
                     </div>
                     <hr />
-                    <p className="form-text">Doesn't have an account? <Link to='/register'>Sign up here!</Link></p>
                     <div className="mb-3">
-                        <button className="btn btn-primary container-fluid" onClick={(e) => onSubmitHandler(e)}>Log in</button>
+                        <button className="btn btn-primary container-fluid" type="submit">Log in</button>
                     </div>
+                    <p className="form-text">Doesn't have an account? <Link to='/register'>Sign up here!</Link></p>
                 </form>
             </div>
         </div>
