@@ -1,0 +1,21 @@
+.register-svg-wrapper {
+    position: relative;
+    background-image: url('../svg/svg_resg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: calc(100vh - 56px);
+}
+
+.register-form-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.register-form-content {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%);
+}
