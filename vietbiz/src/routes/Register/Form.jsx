@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom';
 import '../../assets/stylesheets/Login.css';
 import axios from 'axios';
-import { login, loginErrorHandler } from '../../../utils/auth/login'
+import { login, loginErrorHandler } from '../../utils/auth/login';
+import { registerInfoHandler } from '../../utils/auth/register';
 
 export default function Form() {
     const [firstname, setFirstname] = useState('');
@@ -22,6 +23,11 @@ export default function Form() {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         const user = {firstname, lastname, username, password, phone, email, address, postalCode};
+        const { error } = registerInfoHandler(user);
+        if(error) {
+            errorMsg(error);
+            return;
+        }
         axios.post("/api/user/register", user)
             .then(res => {
                 login(res.data);

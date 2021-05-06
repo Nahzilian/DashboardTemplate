@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import './components/assets/stylesheets/App.css';
-import Homepage from './components/Homepage/Homepage';
+
+// Third libraries
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+
+// Routes
+import './routes/assets/stylesheets/App.css';
+import Homepage from './routes/Homepage/Homepage';
 import NotFound from './components/NotFound/NotFound';
-import Login from './components/Auth/Login/Login';
-import Register from './components/Auth/Register/Register';
-import Dashboard from './components/Dashboard/Dashboard';
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import Login from './routes/Auth/Login/Login';
+import Register from './routes/Register/Register';
+import Dashboard from './routes/Dashboard/Dashboard';
+import ProtectedRoute from './routes/ProtectedRoute/ProtectedRoute';
 
 
 

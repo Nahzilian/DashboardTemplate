@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from './Form'
-import Navbar from '../../Common/Navbar'
+import Navbar from '../../../components/Navbar/Navbar'
 import '../../assets/stylesheets/Login.css';
 export default function Login() {
     return (

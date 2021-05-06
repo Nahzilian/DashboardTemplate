@@ -1,12 +1,12 @@
 import React from 'react'
 import Form from './Form'
-import Navbar from '../../Common/Navbar'
+// import Navbar from '../../Common/Navbar'
 import '../../assets/stylesheets/Register.css'
 
 export default function Register() {
     return (
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <div className="container-fluid">
                 <div className="row">
                     <div className="col col-6 register-svg-wrapper"/>
