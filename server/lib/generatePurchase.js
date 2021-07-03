@@ -27,18 +27,23 @@ const generatePurchase = () => {
 }
 
 const generateMultiplePurchases = () => {
-    let result = []
     let randomAmount = Math.floor(Math.random() * 10)
+    return generateByRequest(randomAmount)
+}
 
-    for (var i = 0; i <= randomAmount; i++) {
+const generateByRequest = (amount) => {
+    let result = []
+    
+    for (var i = 0; i <= amount; i++) {
         result.push(generatePurchase())
     }
-
+    
     return result
 }
 
 
 module.exports = {
     generatePurchase: generatePurchase,
-    generateMultiplePurchases: generateMultiplePurchases
+    generateMultiplePurchases: generateMultiplePurchases,
+    generateByRequest: generateByRequest
 };
