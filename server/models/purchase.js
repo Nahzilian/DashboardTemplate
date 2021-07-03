@@ -1,10 +1,12 @@
 const { sum } = require('../lib/analytics')
 
-export const format = (data) => {
+const format = (data) => {
     return {
-        buyer : data.buyer,
-        products : data.products,
-        date : data.date,
+        ...data,
         totalPrice : sum(data.products.map(x => x.price))
     }
+}
+
+module.exports = {
+    format: format
 }
