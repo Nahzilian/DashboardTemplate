@@ -1,6 +1,9 @@
+import Sidebar from '../components/Sidebar'
+
 const Index = () => {
-    return ( <div>
-        <h1>Hello world</h1>
+    return ( 
+    <div>
+        <Sidebar active={0}/>        
     </div> );
 }
  
