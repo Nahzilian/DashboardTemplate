@@ -1,1 +1,12 @@
-$base-color: #fff
+$color-60:#1C3144;
+$color-30:#3F88C5;
+$color-10-1:#FFBA08;
+$color-10-2:#D00000;
+$color-10-3:#A2AEBB;
+$color-10-4:#E4FDE1;
+
+
+body {
+    background-color: $color-60;
+    color: $color-10-4;
+}

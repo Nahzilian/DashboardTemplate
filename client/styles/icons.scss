@@ -1,6 +1,12 @@
+@import "meta";
+
+
+.nav-link {
+    color: $color-60 !important;
+}
 .active-icon {
     width: 100%;
     height: 100%;
-    background-color: aqua !important;
-    color: white !important;
+    background-color: $color-10-1 !important;
+    color: $color-10-4 !important;
 }
