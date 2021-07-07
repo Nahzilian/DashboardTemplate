@@ -1,4 +1,4 @@
-const Sidebar = ({active = 0}) => {
+const Sidebar = ({active = 0, children = null}) => {
     return ( <div className="container-fluid">
     <div className="row">
         <div className="col-sm-auto bg-light sticky-top">
@@ -26,7 +26,7 @@ const Sidebar = ({active = 0}) => {
             </div>
         </div>
         <div className="col-sm p-3 min-vh-100">
-            
+            {children}
         </div>
     </div>
 </div> );
