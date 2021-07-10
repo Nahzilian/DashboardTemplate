@@ -1,24 +1,41 @@
-export default function dataFormat(format, data){
-    if(Array.isArray(data)) return arrayFormat(format, data)
-    else return singleItemFormat(format, data)
-}
-
-const singleItemFormat = (format = null, data) => {
+export const singleItemFormat = (format = null, data) => {
+    console.log(data)
     if(!format) return data
     let obj = {}
     for(let field of format) {
+        console.log(field)
+        console.log(data["id"])
         obj[field] = data[field]
     }
 
     return obj
 }
 
-const arrayFormat = (format = null, data) => {
+export const arrayFormat = (format = null, data) => {
     if(!format) return data
     let filteredObj = []
-    for(item in data){
-        filteredObj.push(singleItemFormat(item))
+    for(let item of data){
+        filteredObj.push(singleItemFormat(format, item))
     }
 
     return filteredObj
+}
+
+
+export const capFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+export const formatDate = (date) => {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
 }
