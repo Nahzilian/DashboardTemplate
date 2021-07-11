@@ -1,10 +1,7 @@
 export const singleItemFormat = (format = null, data) => {
-    console.log(data)
     if(!format) return data
     let obj = {}
     for(let field of format) {
-        console.log(field)
-        console.log(data["id"])
         obj[field] = data[field]
     }
 
