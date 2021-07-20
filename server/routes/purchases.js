@@ -4,7 +4,8 @@ const { generateMultiplePurchases, generateByRequest } = require('../lib/generat
 
 router.get('/', (req, res) => {
     let page = req.query.page
-    let purchases = page ? generateByRequest(page) : generateMultiplePurchases()
+    let limit = req.query.limit
+    let purchases = page ? generateByRequest(limit) : generateMultiplePurchases()
     res.send(purchases)
 })
 

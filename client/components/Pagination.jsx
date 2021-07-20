@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {usePagination, displayLimit} from '../lib/usePagination'
 
 const Page = ({index, active, onClick}) => {
@@ -6,21 +5,26 @@ const Page = ({index, active, onClick}) => {
 }
 
 
-const Pagination = ({pageAmount}) => {
+const Pagination = ({pageAmount, callback}) => {
     const [{pages, curPage}, setPage] = usePagination({totalPage: pageAmount, page: 0})
+
+    const activePage = (page) => {
+        callback(page)
+        setPage(page)
+    }
 
     return (
         <nav aria-label="Log page navigation">
-            <ul className="pagination justify-content-center">
+            <ul className="pagination">
                 <li className={`page-item ${ curPage > 0 ? '' : 'disabled'}`}>
-                    <a className="page-link" aria-disabled="true" onClick={() => setPage(curPage - 1 )}>Previous</a>
+                    <a className="page-link" aria-disabled="true" onClick={() => activePage(curPage - 1 )}>Previous</a>
                 </li>
                 {pages && pages.length > 0 ? 
-                    pages.map((x) => <Page onClick={() => setPage(x)} index = {x} active = {curPage}/>)
+                    pages.map((x, i) => <Page onClick={() => activePage(x)} index = {x} active = {curPage} key={i}/>)
                     : <Page index = {1}/>
                 }
                 <li className={`page-item ${curPage + displayLimit >= pageAmount? 'disabled' : ''}`}>
-                    <a className="page-link" onClick={() => setPage(curPage + 1)}>Next</a>
+                    <a className="page-link" onClick={() => activePage(curPage + 1)}>Next</a>
                 </li>
             </ul>
         </nav>

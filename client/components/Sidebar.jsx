@@ -26,7 +26,9 @@ const Sidebar = ({active = 0, children = null}) => {
             </div>
         </div>
         <div className="col-sm p-3 min-vh-100">
-            {children}
+            <div className="container">
+                {children}
+            </div>
         </div>
     </div>
 </div> );
