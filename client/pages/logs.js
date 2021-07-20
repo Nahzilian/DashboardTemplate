@@ -20,6 +20,9 @@ const Logs = () => {
 
     return (
         <Sidebar active={1}>
+            <div>
+                Header or something
+            </div>
             <div className="row">
                 <div className="col"><Pagination pageAmount={8} callback={setPage} /></div>
                 <div className="col d-flex justify-content-end" style={{paddingBottom: "1rem"}}>
@@ -31,7 +34,7 @@ const Logs = () => {
                 </div>
             </div>
 
-            <Table data={data} format={table} />
+            <Table data={data} format={table} filterFields={["username","firstName", "lastName" ,"date", "id"]}/>
         </Sidebar>
     );
 }

@@ -36,3 +36,41 @@ export const formatDate = (date) => {
 
     return [year, month, day].join('-');
 }
+
+
+export const quickSort = (arr, key) => {
+    qSort(arr, 0, arr.length - 1, key)
+}
+
+const qSort = (arr, low, high, key) => {
+    if (low < high) {
+        // Find the partition point
+        let p = partition(arr, low, high, key);
+        qSort(arr, low, p - 1, key);
+        qSort(arr, p + 1, high, key)
+    }
+}
+
+const partition = (arr, low, high, key) => {
+    // Define pivot
+    let pivot = arr[high][key];
+    // Define first index  
+    var i = low - 1;
+
+    // Within the range of the low and high
+    for (let j = low; j <= high - 1; j++) {
+        // If numbers are smaller than pivot point, swap
+        if (arr[j][key] < pivot) {
+            i++;
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    // final swap
+    var tempPiv = arr[i + 1];
+    arr[i + 1] = arr[high];
+    arr[high] = tempPiv;
+    return i + 1;
+}
