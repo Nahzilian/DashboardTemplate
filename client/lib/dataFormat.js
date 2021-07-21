@@ -37,6 +37,25 @@ export const formatDate = (date) => {
     return [year, month, day].join('-');
 }
 
+export const itemCounter = (arr, key) => {
+    let itemMap = new Map()
+    for(let item of arr) {
+        let val = itemMap.has(item[key]) ? itemMap.get(item[key]) + 1 : 1
+        itemMap.set(item[key], val)
+    }
+    return itemMap
+}
+
+
+export const sumArr = (arr) => {
+    let result = 0
+    for(let item of arr) {
+        result += item
+    }
+
+    return result
+}
+
 
 export const quickSort = (arr, key) => {
     qSort(arr, 0, arr.length - 1, key)
