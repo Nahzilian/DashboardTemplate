@@ -6,8 +6,7 @@ import Card from '../components/Card'
 import { getTableData } from '../modules/dashboard/dashboardAPI'
 import { table } from '../lib/formats'
 import { formatDate, sumArr, itemCounter } from '../lib/dataFormat'
-
-import DoughnutChart from '../components/DoughnutChart'
+import { DoughnutChart } from '../components/Charts'
 
 
 const Logs = () => {

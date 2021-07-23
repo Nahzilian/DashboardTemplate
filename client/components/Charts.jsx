@@ -26,8 +26,7 @@ const defaultSetting = {
     ],
 };
 
-const DoughnutChart = ({data = null}) => {
-    console.log(data)
+export const DoughnutChart = ({data = null}) => {
         return (
             
             <div>
@@ -35,4 +34,3 @@ const DoughnutChart = ({data = null}) => {
             </div>);
 }
 
-export default DoughnutChart;

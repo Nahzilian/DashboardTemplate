@@ -10,3 +10,12 @@
     background-color: $color-10-1 !important;
     color: $color-10-4 !important;
 }
+
+.alert {
+    display: none;
+}
+
+
+.active-alert {
+    display: flex;
+}

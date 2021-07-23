@@ -8,7 +8,7 @@ const getRandomAmountOfItem = () => {
     let randomAmount = Math.floor(Math.random() * 10)
 
     for (var i = 0; i <= randomAmount; i++) {
-        let randomItemNum = Math.floor(Math.random() * 40)
+        let randomItemNum = Math.floor(Math.random() * 10)
         result.push(staticProduct[randomItemNum])
     }
 
