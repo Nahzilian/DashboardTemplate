@@ -1,4 +1,4 @@
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut, Line } from 'react-chartjs-2';
 const defaultSetting = {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [
@@ -26,11 +26,21 @@ const defaultSetting = {
     ],
 };
 
-export const DoughnutChart = ({data = null}) => {
-        return (
-            
-            <div>
-                <Doughnut data={data ? data : defaultSetting} width={200} height={200} options={{ maintainAspectRatio: false }} />
-            </div>);
+export const DoughnutChart = ({ data = null }) => {
+    return (
+        <div>
+            <Doughnut data={data ? data : defaultSetting} width={200} height={200} options={{ maintainAspectRatio: false }} />
+        </div>
+    );
 }
+
+
+export const LineChart = ({data = null}) => {
+    return (
+        <div>
+            <Line data={data ? data : defaultSetting} />
+        </div>
+    )
+}
+
 
