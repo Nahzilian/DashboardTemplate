@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACQA,AAAA,IAAI,CAAC;EACD,gBAAgB,EATV,OAAO;EAUb,KAAK,EALG,OAAO;CAMlB;;ADTD,AAAA,MAAM,CAAC;EACH,gBAAgB,ECER,OAAO;EDDf,KAAK,ECJC,OAAO;CDKhB",
+    "sources": [
+        "table.scss",
+        "meta.scss"
+    ],
+    "names": [],
+    "file": "table.css"
+}
