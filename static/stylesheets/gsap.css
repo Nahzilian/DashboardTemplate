@@ -1,0 +1,29 @@
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.tomato {
+    background-color: tomato;
+}
+
+.divider {
+    width: 100vw;
+    height: 100px;
+}
+
+.small-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.stagger-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.banner-text{
+        
+}

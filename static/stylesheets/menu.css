@@ -1,0 +1,62 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #F9C22E;
+}
+
+.menu-icon-cross, .menu-icon {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color:#0C090D; 
+    margin: 2px;
+    z-index: 20;
+}
+
+.menu-icon-cross {
+    background-color: #F9C22E;
+}
+
+#top-line {
+    width: 20px;
+}
+
+#bottom-line {
+    width: 40px;
+}
+
+#cross-line-1, #cross-line-2 {
+    position: absolute;
+    display: none;
+}
+
+#cross-line-1{
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+#cross-line-2{
+    transform: rotate(-45deg) translate(-5%, 300%);
+}
+
+
+.sidebar {
+    width: 0;
+    height: 100vh;
+    background-color: #0C090D;
+    position: fixed;
+    left: 0;
+    top: 0
+}
+
+#banner {
+    background-image: url('../assets/testimg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+    font-size: 100px;
+    display: grid;
+    place-items: center;
+    color: white;
+}

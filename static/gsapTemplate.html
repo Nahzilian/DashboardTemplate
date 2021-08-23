@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <title>
+        GSAP template
+    </title>
+    <link rel="stylesheet" href="stylesheets/gsap.css" type="text/css">
+</header>
+
+<body>
+
+    <section>
+        <h2>gsap.to()</h2>
+        <div id="gsap-to" class="box tomato"></div>
+        <button onclick="gsapTo()">Run</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>gsap.to()</h2>
+        <div id="gsap-from" class="box tomato"></div>
+        <button onclick="gsapFrom()">Run</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>gsap.fromTo()</h2>
+        <div id="gsap-from-to" class="box tomato"></div>
+        <button onclick="gsapFromTo()">Run</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>gsap.set()</h2>
+        <div id="gsap-set" class="box tomato"></div>
+        <button onclick="gsapSet()">Run</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Easing</h2>
+        <div id="gsap-ease" class="box tomato"></div>
+
+        <button onclick="gsapsEaseDefault()">Run</button>
+        <small>The current easing level is set to power 1. See the following link for ref <a href="https://greensock.com/get-started/">here</a></small>
+        
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Stagger</h2>
+        <div class="stagger-wrapper">
+            <div class="small-box tomato"></div>
+            <div class="small-box tomato"></div>
+            <div class="small-box tomato"></div>
+            <div class="small-box tomato"></div>
+            <div class="small-box tomato"></div>
+        </div>
+        <button onclick="gsapStagger()">Run</button>
+        
+    </section>
+    
+    <div class="divider"></div>
+
+    <section>
+        <h2>Basic control methods</h2>
+        <div id="tween-controller" class="box tomato"></div>
+
+        <button onclick="pause()">pause</button>
+        <button onclick="resume()">resume</button>
+        <button onclick="reverse()">reverse</button>
+        <button onclick="seek()">seek</button>
+        <button onclick="progress()">progress</button>
+        <button onclick="speedDown()">speedDown</button>
+        <button onclick="speedUp()">speedUp</button>
+        <button onclick="restart()">restart</button>
+        
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Time line</h2>
+        <div id="gsap-set" class="box tomato"></div>
+        <button onclick="gsapSet()">Run</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <h2>Time line</h2>
+        <div id="gsap-set" class="box tomato"></div>
+        <button onclick="gsapSet()">Run</button>
+    </section>
+    
+    <div class="divider"></div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="./script/gsapTemplate.js"></script>
+</body>
+
+</html>

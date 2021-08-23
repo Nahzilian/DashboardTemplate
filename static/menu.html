@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Some navbar design animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheets/menu.css">
+</head>
+
+<body>
+
+    <div class="container navbar">
+        <i class="menu" onclick="menuAnimation()">
+            <span id="top-line" class="menu-icon"></span>
+            <span id="center-line" class="menu-icon"></span>
+            <span id="bottom-line" class="menu-icon"></span>
+        </i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <i class="menu" id="cross-lines"onclick="menuAnimation(true)">
+            <span id="cross-line-1" class="menu-icon-cross"></span>
+            <span id="cross-line-2" class="menu-icon-cross"></span>
+        </i>
+    </div>
+
+    <section id="banner">
+        <div id="banner-text">
+            Dream Big
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="./script/gsapMenu.js"></script>
+</body>
+
+
+</html>
