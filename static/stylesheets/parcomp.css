@@ -1,0 +1,18 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.spacer {
+    height: 50vh
+}
+
+.parallax-wrapper {
+    width: 100%;
+    height: 400px;
+    background-image: url("https://drscdn.500px.org/photo/11834033/m%3D900/v2?sig=1eb0528c80adb0123618f318d7542d7106da406fdadd86f61684a72bc3f55479");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
